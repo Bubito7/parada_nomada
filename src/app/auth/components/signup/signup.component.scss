@@ -1,0 +1,85 @@
+.signup-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #e3bb4e; /* Fondo cambiado a #e3bb4e */
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+/* Elimina el margen del label ya que no lo usaremos */
+label {
+  display: none;
+}
+
+/* Mejora la apariencia de los inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Estilo cuando se hace clic en el input */
+input:focus {
+  border-color: #003366;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 51, 102, 0.5);
+}
+
+/* Mejora el botón */
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+  background-color: #0055aa;
+}
+
+/* Centra el enlace de login y mejora su apariencia */
+.login-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+  color: #0055aa;
+}
+
+/* Estilo para la imagen del logo */
+.logo-container {
+  margin-top: 30px; /* Un poco más de espacio entre el formulario y el logo */
+}
+
+.logo {
+  display: block; /* Centra la imagen */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  width: 250px; /* Aumenta el tamaño del logo */
+  height: auto; /* Mantiene la proporción original de la imagen */
+}

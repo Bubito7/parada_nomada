@@ -1,0 +1,43 @@
+<div class="list-container">
+  <h2 class="list-title">Detalles de Plaza</h2>
+
+  <div class="card-container">
+    <div class="card">
+      <img [src]="plaza?.processedImg || 'http://localhost:8080/images/defecto.png'" alt="Imagen de plaza" class="card-img" />
+
+      <div class="card-body">
+        <h3 class="card-title">{{ plaza?.nombre }}</h3>
+        <p><strong>Descripción:</strong> {{ plaza?.descripcion || "No disponible" }}</p>
+        <p><strong>Tipo:</strong> {{ plaza?.tipo || "No especificado" }}</p>
+        <p><strong>Precio:</strong> {{ plaza?.precio }} €</p>
+        <p><strong>Servicios:</strong>
+          <span *ngIf="plaza?.electricidad">Electricidad</span>
+          <span *ngIf="plaza?.agua">Agua</span>
+        </p>
+
+        <!-- Formulario de reserva -->
+        <form [formGroup]="validateForm" (ngSubmit)="bookAPlaza(validateForm.value)">
+          <div class="date-container">
+            <!-- Desde -->
+            <div class="date-line">
+              <label for="fromDate">Desde:</label>
+              <input id="fromDate" type="date" formControlName="fromDate" />
+            </div>
+
+            <!-- Hasta -->
+            <div class="date-line">
+              <label for="toDate">Hasta:</label>
+              <input id="toDate" type="date" formControlName="toDate" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn-reservar" [disabled]="validateForm.invalid">
+            Reservar Plaza
+          </button>
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+</div>

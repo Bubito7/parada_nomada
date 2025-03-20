@@ -1,0 +1,43 @@
+<div class="list-container">
+  <h2 class="list-title">Lista de Plazas</h2>
+  <div class="card-container">
+    <!-- Recorremos las plazas y las mostramos como tarjetas -->
+    <div *ngFor="let plaza of plazas" class="card">
+      <img [src]="plaza.processedImg" alt="Imagen de plaza" class="card-img" />
+      <div class="card-body">
+        <h3 class="card-title">{{ plaza.nombre }}</h3>                                                                                                                          
+        <p class="card-description">
+          <strong>Descripción:</strong>
+          {{ plaza.descripcion || "No disponible" }}
+        </p>
+        <p class="card-description">
+          <strong>Tipo:</strong> {{ plaza.tipo }}
+        </p>
+        <p class="card-description">
+          <strong>Precio:</strong> {{ plaza.precio }} €
+        </p>
+        <p class="card-description">
+          <strong>Servicios:</strong>
+          <span *ngIf="plaza.electricidad == 'true'">Electricidad</span>
+          <span *ngIf="plaza.agua == 'true'">Agua</span>
+        </p>
+
+        <!-- Contenedor de los botones -->
+        <div class="button-container">
+          <!-- BOTÓN PARA BORRAR -->
+          <button
+            class="btn-danger"
+            (click)="deletePlaza(plaza.id)"
+          >
+            🗑 Borrar
+          </button>
+
+          <!-- Botón de actualizar -->
+          <button class="btn-update" routerLink="/admin/plaza/{{plaza.id}}">
+            Actualizar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,137 @@
+/* Fondo de la página */
+body {
+  background-color: #e3f4f4; /* Fondo de la página */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+.list-container {
+  padding: 20px;
+  background-color: #e3f4f4; /* Fondo de la página */
+  min-height: 100vh; /* Para que ocupe toda la pantalla */
+}
+
+/* Contenedor de la tarjeta */
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Tarjeta */
+.card {
+  background-color: #f7e1a5; /* Fondo de la tarjeta */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Imagen de la tarjeta */
+.card-img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Título de la tarjeta */
+.card-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1d5e8e;
+}
+
+/* Títulos como Descripción, Tipo, Precio */
+.card-body p strong {
+  color: #1d5e8e; /* Color para los títulos de Descripción, Tipo, Precio, etc. */
+}
+
+/* Descripción de la tarjeta */
+.card-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Contenedor del formulario */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+/* Estilos para el formulario de reserva */
+.date-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Cada línea de fecha (Desde / Hasta) */
+.date-line {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre label y input */
+  width: 100%;
+}
+
+/* Ajustes de los labels */
+.date-line label {
+  font-weight: bold;
+  white-space: nowrap; /* Evita que se divida en varias líneas */
+  color: #1d5e8e; /* Color similar al dashboard */
+}
+
+/* Ajustes de los inputs */
+.date-line input {
+  flex-grow: 1; /* Que el input ocupe el espacio restante */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botón de reservar más pequeño */
+.btn-reservar {
+  background-color: #3796e4; /* Color similar al botón de actualización del dashboard */
+  color: white;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-reservar:hover {
+  background-color: #2577c4; /* Efecto de hover */
+}
+
+/* Título de la lista */
+.list-title {
+  font-size: 28px; /* Título más grande */
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1d5e8e; /* Color del título similar al dashboard */
+  text-align: center; /* Centrar el título */
+}

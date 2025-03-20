@@ -1,0 +1,303 @@
+/* Asegura que el fondo se aplique a toda la página */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #e3f4f4 !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+/* Imagen debajo de la barra de navegación */
+.landing-image-container {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-image {
+  width: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+}
+
+/* Estilos generales para las secciones */
+.section {
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+/* Sección de Servicios */
+.services-section {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #f8f8f8;
+}
+
+.services-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2464b1;
+}
+
+.services-description {
+  font-size: 18px;
+  color: #7f7e86;
+  margin: 20px auto;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-item {
+  width: 250px;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffcc00;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-8px);
+}
+
+.service-item h3 {
+  font-size: 20px;
+  color: #2464b1;
+}
+
+.service-item p {
+  font-size: 16px;
+  color: #7f7e86;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .service-item {
+    width: 200px;
+  }
+  .services-title {
+    font-size: 28px;
+  }
+  .services-description {
+    font-size: 16px;
+  }
+}
+
+/* Sección de Tarifas */
+.tariffs-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.tariffs-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2464b1;
+}
+
+.tariffs-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tariff-column {
+  background-color: #ffcc00;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 45%;
+}
+
+.tariff-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2464b1;
+}
+
+.rate h5 {
+  font-size: 20px;
+  color: #37adda;
+}
+
+.note {
+  font-size: 16px;
+  color: #7f7e86;
+}
+
+.large-text {
+  font-size: 1.5rem;  /* O el tamaño que prefieras */
+  font-weight: bold;  /* Si deseas que el texto sea más destacado */
+  color: #333;  /* O el color que prefieras */
+}
+
+
+/* Sección de Contacto */
+.contact-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.contact-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2464b1;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Contenedor de la información y mapa */
+.map-weather-container {
+  display: flex;
+  flex: 1;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Sección de Contacto */
+.contact-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.contact-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2464b1;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column; /* Cambiado a columna */
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sección de Contacto */
+.contact-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.contact-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2464b1;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column; /* Cambiado a columna */
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Información de contacto */
+.contact-info {
+  display: flex; /* Mostrar en una fila */
+  justify-content: center; /* Centrar los elementos */
+  gap: 20px; /* Espacio entre los elementos */
+  width: 100%;
+}
+
+.contact-item {
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  flex: 1;
+}
+
+.contact-item h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2464b1;
+}
+
+.contact-item p {
+  font-size: 16px;
+  color: #7f7e86;
+}
+
+/* Mapa y Clima */
+.map-weather-container {
+  display: flex;
+  flex-direction: row; /* Map y clima en fila */
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.map-container {
+  width: 60%;
+}
+
+.weather-info {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+
+.weather-info h3 {
+  font-size: 24px;
+  color: #2464b1;
+}
+
+.weather-info p {
+  font-size: 16px;
+  color: #7f7e86;
+}
+
+.weather-info img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .map-weather-container {
+    flex-direction: column; /* En pantallas pequeñas, mapa y clima en columna */
+    align-items: center;
+  }
+
+  .map-container {
+    width: 100%;
+  }
+
+  .weather-info {
+    text-align: center;
+  }
+
+  .contact-info {
+    flex-direction: column; /* En pantallas pequeñas, la info de contacto se apila */
+    align-items: center;
+  }
+
+  .contact-item {
+    width: 100%;
+  }
+}
+

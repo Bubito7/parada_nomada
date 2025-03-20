@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+/* Asegurarnos de que el fondo se aplique a toda la página */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #e3f4f4; /* El color de fondo */
+  font-family: Arial, sans-serif; /* Fuente global */
+}
+
+/* Aseguramos que el componente root ocupe toda la altura de la página */
+app-root {
+  display: block;
+  height: 100%;
+  background-color: #e3f4f4;
+}
+
+/* Aseguramos que los contenedores hijos de app-root también ocupen el 100% */
+.main-container {
+  height: 100%;
+  background-color: #e3f4f4;
+}

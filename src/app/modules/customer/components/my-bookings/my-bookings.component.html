@@ -1,0 +1,33 @@
+<div *ngIf="isSpinning" class="loading-spinner">
+  <!-- Agrega aquí un spinner de carga si es necesario -->
+  Cargando reservas...
+</div>
+
+<table *ngIf="!isSpinning && bookings.length > 0" class="bookings-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Fecha de llegada</th>
+      <th>Fecha de salida</th>
+      <th>Días</th>
+      <th>Precio</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let booking of bookings">
+      <td>{{ booking.id }}</td>
+      <td>{{ booking.fromDate ? booking.fromDate : 'No disponible' }}</td>
+      <td>{{ booking.toDate ? booking.toDate : 'No disponible' }}</td>
+      <td>{{ booking.days }}</td>
+      <td>{{ booking.precio | currency: 'EUR' : 'symbol' : '1.2-2' }}</td>
+
+      <td>{{ booking.book_plaza_status  }}</td> <!-- Asegúrate de que el estado esté presente en los datos -->
+    </tr>
+  </tbody>
+</table>
+
+<!-- Si no hay reservas, muestra un mensaje adecuado -->
+<div *ngIf="!isSpinning && bookings.length === 0">
+  No tienes reservas.
+</div>

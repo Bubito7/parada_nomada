@@ -1,0 +1,65 @@
+<div class="card-container">
+  <!-- Título -->
+  <h2>Actualizar Plaza</h2>
+
+  <form [formGroup]="updateForm" (ngSubmit)="updatePlaza()">
+
+    <!-- Nombre con el select -->
+    <div class="form-item">
+      <label for="nombre" class="form-label">Selecciona una Plaza</label>
+      <select formControlName="nombre" id="nombre" class="form-control" required>
+        <option *ngFor="let plaza of listOfPlazas" [value]="plaza">{{ plaza }}</option>
+      </select>
+    </div>
+
+    <!-- Precio -->
+    <div class="form-item">
+      <label for="precio" class="form-label">Precio (€)</label>
+      <input type="number" formControlName="precio" id="precio" class="form-control" placeholder="Ingrese el precio" required />
+    </div>
+
+    <!-- Servicios con checkbox -->
+    <div class="form-item">
+      <label class="form-label">Servicios</label>
+      <div class="checkbox-container">
+        <div class="checkbox-item">
+          <input type="checkbox" id="electricidad" formControlName="electricidad" />
+          <label for="electricidad">Electricidad</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="agua" formControlName="agua" />
+          <label for="agua">Agua</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tipo con el select -->
+    <div class="form-item">
+      <label for="tipo" class="form-label">Tipo de Vehículo</label>
+      <select formControlName="tipo" id="tipo" class="form-control" required>
+        <option *ngFor="let type of listOfType" [value]="type">{{ type }}</option>
+      </select>
+    </div>
+
+    <!-- Descripción -->
+    <div class="form-item">
+      <label for="descripcion" class="form-label">Descripción</label>
+      <textarea formControlName="descripcion" id="descripcion" class="form-control" placeholder="Detalles de la plaza" rows="4"></textarea>
+    </div>
+
+    <!-- Imagen -->
+    <div class="form-item">
+      <label for="imagen" class="form-label">Cambiar Imagen</label>
+      <input type="file" id="imagen" (change)="onFileSelected($event)" class="form-control" title="Selecciona una imagen" />
+    </div>
+
+    <!-- Vista previa de la imagen -->
+    <img *ngIf="imagePreview" [src]="imagePreview" alt="Vista previa" width="200" />
+
+    <!-- Botón de enviar -->
+    <div class="form-item">
+      <button type="submit" class="form-button" [disabled]="updateForm.invalid">Actualizar Plaza</button>
+    </div>
+
+  </form>
+</div>

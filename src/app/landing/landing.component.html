@@ -1,0 +1,150 @@
+<!-- Imagen debajo de la barra de navegación -->
+<div class="landing-image-container">
+  <img src="assets/playayplazasfoto.png" alt="Imagen de Parada Nómada" class="landing-image">
+</div>
+
+<!-- Sección de Servicios -->
+<div class="services-section" id="services">
+  <h2 class="services-title">Servicios</h2>
+  <p class="services-description">
+    El Parking de Caravanas Parada Nómada ofrece una experiencia completa para los amantes del caravaning. Entre sus servicios destacan amplias plazas de aparcamiento para caravanas, autocaravanas y campers, con vigilancia 24/7 para garantizar la seguridad. Además, cuenta con fácil acceso a puntos de interés locales, rutas de ciclismo y actividades al aire libre.
+    <br><br>
+    Descubre todos los servicios con los que cuenta el parking.
+  </p>
+
+  <div class="services-list">
+    <div class="service-item">
+      <h3>WiFi</h3>
+      <p>Wifi gratuito para los clientes.</p>
+    </div>
+    <div class="service-item">
+      <h3>Playa</h3>
+      <p>Primera línea de playa.</p>
+    </div>
+    <div class="service-item">
+      <h3>Vigilancia 24h</h3>
+      <p>Vigilancia las 24 horas por cámara de seguridad y personal de la empresa.</p>
+    </div>
+    <div class="service-item">
+      <h3>Vaciado de agua</h3>
+      <p>Zona de vaciado de aguas grises y negras, opcional para usuarios del aparcamiento.</p>
+    </div>
+    <div class="service-item">
+      <h3>Abierto 24/7</h3>
+      <p>Abrimos 24 horas al día los siete días de la semana. Todo el año.</p>
+    </div>
+    <div class="service-item">
+      <h3>Electricidad</h3>
+      <p>Toma de corriente de electricidad (opcional).</p>
+    </div>
+    <div class="service-item">
+      <h3>Aseos</h3>
+      <p>Servicio de WC, duchas de agua caliente y fregaderos.</p>
+    </div>
+    <div class="service-item">
+      <h3>Descansar</h3>
+      <p>Posibilidad de descansar en nuestras instalaciones de parking.</p>
+    </div>
+    <div class="service-item">
+      <h3>Iluminación nocturna</h3>
+      <p>Recinto iluminado y vallado.</p>
+    </div>
+    <div class="service-item">
+      <h3>Acceso para personas con movilidad reducida</h3>
+      <p>Acceso sin barreras arquitectónicas.</p>
+    </div>
+    <div class="service-item">
+      <h3>Tienda minimarket</h3>
+      <p>Para que no te falte nada.</p>
+    </div>
+    <div class="service-item">
+      <h3>Aceptamos mascotas</h3>
+      <p>Siempre atadas dentro del recinto.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Sección de Tarifas -->
+<div class="tariffs-section" id="tariffs">
+  <h2 class="tariffs-title">Tarifas</h2>
+  <div class="tariffs-container">
+    <div class="tariff-column">
+      <h4 class="tariff-title">Tarifas del Aparcamiento</h4>
+      <div class="rate">
+        <h5>Plaza con todos los servicios (agua y electricidad)</h5>
+        <p> 24€/día</p>
+      </div>
+      <div class="rate">
+        <h5>Plaza sin servicios</h5>
+        <p> 20€/día</p>
+      </div>
+      <div class="rate">
+        <h5>Plaza con servicio de electricidad</h5>
+        <p> 22€/día</p>
+      </div>
+      <div class="rate">
+        <h5>Plaza con servicio de agua</h5>
+        <p> 22€/día</p>
+      </div>
+      <p class="note">* Incluye todos los servicios del parking</p>
+      <p class="note">* Disponibilidad limitada</p>
+      <p class="note">Todos los precios llevan el 21% IVA incluido.</p>
+
+      <p class="note large-text">Para realizar la reserva de plaza, es necesario <a routerLink="/register">registrarse</a> e <a routerLink="/login">iniciar sesión</a>.</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- Sección de Contacto -->
+<div class="contact-section" id="contact">
+  <h2 class="contact-title">Contacto</h2>
+
+  <div class="contact-container">
+    <!-- Información de contacto -->
+    <div class="contact-info">
+      <div class="contact-item">
+        <h3>Teléfono</h3>
+        <p>689 521 478</p>
+      </div>
+      <div class="contact-item">
+        <h3>Correo electrónico</h3>
+        <p>info&#64;paradanomada.com</p>
+      </div>
+      <div class="contact-item">
+        <h3>Ubicación</h3>
+        <p>P.º Marítimo, S/N (Esquina con el camino del Camping), 11159 Vejer de la Frontera, Cádiz</p>
+        <p>36°13'42.2"N 6°03'58.1"W</p>
+        <p>36.228375, -6.066145</p>
+      </div>
+    </div>
+
+    <!-- Mapa y Clima debajo de la información de contacto -->
+    <div class="map-weather-container">
+      <!-- Contenedor del mapa -->
+      <div class="map-container">
+        <google-map
+          height="400px"
+          width="100%"
+          [center]="center"
+          [zoom]="zoom">
+          <map-marker
+            [position]="center"
+            [label]="label">
+          </map-marker>
+        </google-map>
+      </div>
+
+      <!-- Información del clima -->
+      <div *ngIf="weatherData" class="weather-info">
+        <h3>Clima en tu ubicación:</h3>
+        <p><strong>Ciudad:</strong> {{ weatherData.location.name }}</p>
+        <p><strong>Temperatura:</strong> {{ weatherData.current.temp_c }}°C</p>
+        <p><strong>Condición:</strong> {{ weatherData.current.condition.text }}</p>
+        <img [src]="weatherData.current.condition.icon" alt="Ícono del clima">
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,43 @@
+<div class="list-container">
+  <h2 class="list-title">Lista de Plazas</h2>
+  <div class="card-container">
+    <!-- Recorremos las plazas y las mostramos como tarjetas -->
+    <div *ngFor="let plaza of plazas" class="card">
+      <img [src]="plaza.processedImg" alt="Imagen de plaza" class="card-img" />
+      <div class="card-body">
+        <h3 class="card-title">{{ plaza.nombre }}</h3>
+        <p class="card-description">
+          <strong>Descripción:</strong>
+          {{ plaza.descripcion || "No disponible" }}
+        </p>
+        <p class="card-description">
+          <strong>Tipo:</strong> {{ plaza.tipo || "No especificado" }}
+        </p>
+        <p class="card-description">
+          <strong>Precio:</strong> {{ plaza.precio }} €
+        </p>
+        <p class="card-description">
+          <strong>Servicios:</strong>
+          <span *ngIf="plaza.electricidad">Electricidad</span>
+          <span *ngIf="plaza.agua">Agua</span>
+        </p>
+
+        <div class="card-actions">
+          <button class="btn-reservar" [routerLink]="'/customer/book/' + plaza.id">
+            Reservar
+          </button>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Logo debajo del formulario -->
+<div class="logo-container">
+  <img src="assets/LogoSinFondo.png" alt="Logo" class="logo">
+</div>

@@ -1,0 +1,77 @@
+<div class="card-container">
+  <h2>Buscar Plaza</h2>
+
+  <form [formGroup]="searchPlazaForm" (ngSubmit)="searchPlaza()">
+
+    <!-- Nombre con el select -->
+    <div class="form-item">
+      <label for="nombre" class="form-label">Nombre de la Plaza</label>
+      <select formControlName="nombre" id="nombre" class="form-control" required>
+        <option [value]="null">Selecciona una plaza</option>
+        <option *ngFor="let plaza of listOfPlazas" [value]="plaza">{{ plaza }}</option>
+      </select>
+    </div>
+
+    <!-- Tipo de Vehículo -->
+    <div class="form-item">
+      <label for="tipo" class="form-label">Tipo de Vehículo</label>
+      <select formControlName="tipo" id="tipo" class="form-control" required>
+        <option [value]="null">Selecciona un tipo</option>
+        <option *ngFor="let type of listOfType" [value]="type">{{ type }}</option>
+      </select>
+    </div>
+
+    <!-- Servicios con checkbox -->
+    <div class="form-item">
+      <label class="form-label" for="electricidad">Servicios</label>
+      <div class="checkbox-container">
+        <div class="checkbox-item">
+          <input type="checkbox" id="electricidad" formControlName="electricidad" />
+          <label for="electricidad">Electricidad</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="agua" formControlName="agua" />
+          <label for="agua">Agua</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botón para buscar -->
+    <div class="form-item">
+      <button type="submit" class="form-button" [disabled]="searchPlazaForm.invalid">Buscar Plaza</button>
+    </div>
+
+  </form>
+
+  <br>
+
+  <!-- Mostramos las plazas encontradas -->
+  <div *ngIf="isSpinning" class="loading-spinner">
+    Cargando plazas...
+  </div>
+
+  <table *ngIf="!isSpinning && plazas.length > 0" class="plazas-table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Tipo</th>
+        <th>Precio</th>
+        <th>Agua</th>
+        <th>Electricidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of plazas">
+        <td>{{ p.nombre || 'No disponible' }}</td>
+        <td>{{ p.tipo || 'No disponible' }}</td>
+        <td>{{ p.precio }}</td>
+        <td>{{ p.agua || 'No disponible' }}</td>
+        <td>{{ p.electricidad || 'No disponible' }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!isSpinning && plazas.length === 0">
+    No hay plazas registradas.
+  </div>
+</div>

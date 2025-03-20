@@ -1,0 +1,132 @@
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #e3bb4e; /* Fondo cambiado a #e3bb4e */
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+/* Elimina el margen del label ya que no lo usaremos */
+label {
+  display: none;
+}
+
+/* Mejora la apariencia de los inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Estilo cuando se hace clic en el input */
+input:focus {
+  border-color: #003366;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 51, 102, 0.5);
+}
+
+/* Estilo para las validaciones de error */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Mejora el botón */
+.login-form-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.login-form-button:hover {
+  background-color: #0055aa;
+}
+
+/* Centra el enlace de registro y mejora su apariencia */
+.signup-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+  color: #0055aa;
+}
+
+/* Estilo común para ambos botones */
+.register-btn, .login-form-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #003366;  /* Fondo azul oscuro */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+  text-align: center;  /* Centra el texto dentro del botón */
+  display: flex;
+  justify-content: center; /* Centra el texto horizontalmente */
+  align-items: center; /* Centra el texto verticalmente */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+/* Efecto hover para el botón */
+.register-btn:hover, .login-form-button:hover {
+  background-color: #0055aa;  /* Cambio a azul más claro cuando el ratón pasa por encima */
+  transform: scale(1.05);      /* Efecto de escala al pasar el ratón */
+}
+
+/* Estilo para el botón deshabilitado */
+button[disabled] {
+  background-color: #ccc;  /* Gris claro */
+  cursor: not-allowed;     /* Cambia el cursor para indicar que está deshabilitado */
+  opacity: 0.7;            /* Baja la opacidad para indicar que está inactivo */
+}
+
+button[disabled]:hover {
+  background-color: #ccc;  /* Mantiene el mismo color gris cuando se pasa el ratón */
+}
+
+
+
+
+
+/* Estilo para la imagen del logo */
+.logo-container {
+  margin-top: 30px; /* Un poco más de espacio entre el formulario y el logo */
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 250px; /* Tamaño más grande para el logo */
+  height: auto;
+}

@@ -1,0 +1,45 @@
+<div class="login-container">
+  <h2>Iniciar Sesión</h2>
+  <form nz-form [formGroup]="loginForm" (ngSubmit)="login()" class="login-form">
+
+    <!-- Email -->
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Por favor introduce email!">
+        <input nz-input type="email" formControlName="email" placeholder="Email" id="email"/>
+      </nz-form-control>
+      <div *ngIf="loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched" class="error-message">
+        El email debe tener un formato válido.
+      </div>
+      <div *ngIf="loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched" class="error-message">
+        El email es requerido.
+      </div>
+    </nz-form-item>
+
+    <!-- Contraseña -->
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Por favor introduce contraseña!">
+        <input nz-input type="password" formControlName="password" placeholder="Contraseña" id="password"/>
+      </nz-form-control>
+      <div *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched" class="error-message">
+        La contraseña es requerida.
+      </div>
+      <div *ngIf="loginForm.get('password')?.hasError('minlength') && loginForm.get('password')?.touched" class="error-message">
+        La contraseña debe tener al menos 6 caracteres.
+      </div>
+    </nz-form-item>
+
+    <!-- Botón de inicio de sesión -->
+    <button nz-button class="login-form-button" [nzType]="'primary'" [disabled]="loginForm.invalid || isSpinning">
+      Inicia Sesión
+    </button>
+
+    <!-- Enlace a la página de registro -->
+    <p class="signup-link">o <a routerLink="/register">Regístrate ahora!</a></p>
+  </form>
+
+
+</div>
+<!-- Logo debajo del formulario -->
+<div class="logo-container">
+  <img src="assets/LogoSinFondo.png" alt="Logo" class="logo">
+</div>

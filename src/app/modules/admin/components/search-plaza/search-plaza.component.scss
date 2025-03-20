@@ -1,0 +1,118 @@
+.card-container {
+  width: 100%;
+  max-width: 600px; /* Ancho máximo */
+  margin: 50px auto; /* Centramos el formulario en la pantalla */
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #e3bb4e; /* Color del contenedor */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: #1d5e8e;
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.form-label {
+  width: 30%; /* Esto hace que el label ocupe un 30% del espacio */
+  font-weight: bold;
+  text-align: left;
+  color: #2464b1; /* Color de las etiquetas */
+}
+
+.form-control {
+  width: 70%; /* El input o select ocupará el 70% restante */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+}
+
+button {
+  width: auto; /* Hacer que el botón no ocupe todo el ancho */
+  padding: 8px 16px; /* Botón más pequeño, menos margen */
+  background-color: #3796e4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 auto; /* Centrar el botón */
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+button:hover:enabled {
+  background-color: #2577c4; /* Color de hover del botón */
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-item {
+  margin-bottom: 10px;
+}
+
+.checkbox-item input {
+  margin-right: 10px;
+}
+
+.checkbox-item label {
+  color: #2464b1; /* Color de los labels dentro de los checkboxes */
+}
+
+.plazas-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+
+  th, td {
+    padding: 10px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  tr:hover {
+    background-color: #e6f7ff;
+    transition: background 0.3s ease-in-out;
+  }
+}
+
+.loading-spinner {
+  text-align: center;
+  font-size: 1.5em;
+  color: #555;
+  margin-top: 20px;
+}
