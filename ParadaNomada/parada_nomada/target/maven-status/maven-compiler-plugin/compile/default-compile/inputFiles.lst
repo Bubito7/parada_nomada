@@ -1,0 +1,17 @@
+C:\ParadaNomada\parada_nomada\src\main\java\com\paradanomada\configuration\JwtAuthenticationFilter.java
+C:\ParadaNomada\parada_nomada\src\main\java\com\paradanomada\configuration\SimpleCorsFilter.java
+C:\ParadaNomada\parada_nomada\src\main\java\com\paradanomada\configuration\WebSecurityConfiguration.java
+C:\ParadaNomada\parada_nomada\src\main\java\com\paradanomada\controller\AuthController.java
+C:\ParadaNomada\parada_nomada\src\main\java\com\paradanomada\dto\AuthenticationRequest.java
+C:\ParadaNomada\parada_nomada\src\main\java\com\paradanomada\dto\AuthenticationResponse.java
+C:\ParadaNomada\parada_nomada\src\main\java\com\paradanomada\dto\SignupRequest.java
+C:\ParadaNomada\parada_nomada\src\main\java\com\paradanomada\dto\UserDto.java
+C:\ParadaNomada\parada_nomada\src\main\java\com\paradanomada\entity\User.java
+C:\ParadaNomada\parada_nomada\src\main\java\com\paradanomada\enums\UserRole.java
+C:\ParadaNomada\parada_nomada\src\main\java\com\paradanomada\ParadaNomadaApplication.java
+C:\ParadaNomada\parada_nomada\src\main\java\com\paradanomada\repository\UserRepository.java
+C:\ParadaNomada\parada_nomada\src\main\java\com\paradanomada\services\auth\AuthService.java
+C:\ParadaNomada\parada_nomada\src\main\java\com\paradanomada\services\auth\AuthServiceImpl.java
+C:\ParadaNomada\parada_nomada\src\main\java\com\paradanomada\services\jwt\UserService.java
+C:\ParadaNomada\parada_nomada\src\main\java\com\paradanomada\services\jwt\UserServicelmpl.java
+C:\ParadaNomada\parada_nomada\src\main\java\com\paradanomada\utils\JWTUtil.java
